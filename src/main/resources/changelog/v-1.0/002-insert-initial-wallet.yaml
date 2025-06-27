@@ -1,0 +1,17 @@
+databaseChangeLog:
+  - changeSet:
+      id: 2-insert-initial-wallet
+      author: sergey.mazunin
+      changes:
+        - insert:
+            tableName: wallets
+            columns:
+              - column:
+                  name: wallet_id
+                  value: "7209d130-5f54-431a-b6ad-af533bd46d04"
+              - column:
+                  name: version
+                  valueNumeric: 0
+              - column:
+                  name: balance
+                  valueNumeric: 1000.000000000000

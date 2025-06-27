@@ -1,0 +1,25 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1-create-wallets-table
+      author: sergey.mazunin
+      changes:
+        - createTable:
+            tableName: wallets
+            columns:
+              - column:
+                  name: wallet_id
+                  type: UUID
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: version
+                  type: INTEGER
+                  constraints:
+                    nullable: false
+              - column:
+                  name: balance
+                  type: NUMERIC(20, 12)
+                  defaultValueNumeric: 0.000000000000
+                  constraints:
+                    nullable: false
